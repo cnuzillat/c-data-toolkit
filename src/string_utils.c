@@ -23,6 +23,20 @@ void normalize_spaces(char *s) {
     s[write] = '\0';
 }
 
-int count_words(const char *s);
+int count_words(const char *s) {
+    if (s[0] == '\0') {
+        return 0;
+    }
+
+    int words = 1;
+
+    for (int i = 0; s[i] != '\0'; i++) {
+        if (s[i] == ' ') {
+            words++;
+        }
+    }
+
+    return words;
+}
 
 int streq(const char *a, const char *b);
