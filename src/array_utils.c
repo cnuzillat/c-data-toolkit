@@ -1,22 +1,3 @@
-/*
- * array_utils.c
- *
- * Implementation of utility functions for operating on integer arrays.
- * All functions modify arrays in place and avoid dynamic memory allocation.
- *
- * The utilities include:
- *  - Filtering values by range
- *  - Removing consecutive duplicates from sorted arrays
- *  - Computing basic statistics (min, max, average)
- *  - Checking whether an array is sorted
- *
- * These functions are designed for educational use and to demonstrate
- * core C programming concepts such as pointer manipulation, array traversal,
- * and output parameters.
- *
- * Author: Chloe Nuzillat
- */
-
 #include "array_utils.h"
 
 void filter_range(int a[], int *n, int min, int max) {
