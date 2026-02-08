@@ -9,11 +9,20 @@ void filter_range(int a[], int *n, int min, int max) {
       write++;
     }
   }
-
   *n = write;
 }
 
-void compress_duplicates(int a[], int *n);
+void compress_duplicates(int a[], int *n) {
+  int write = 1;
+
+  for (int read = 1; read < *n; read++) {
+    if (a[read] != a[read - 1]) {
+      a[write] = a[read];
+      write++;
+    }
+  }
+  *n = write;
+}
 
 void stats(const int a[], int n, int *min, int *max, double *avg);
 
