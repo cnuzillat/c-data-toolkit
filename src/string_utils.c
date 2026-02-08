@@ -39,4 +39,18 @@ int count_words(const char *s) {
     return words;
 }
 
-int streq(const char *a, const char *b);
+int streq(const char *a, const char *b) {
+    while (*a != '\0' && *b != '\0') {
+        if (*a != *b) {
+            return 0;
+        }
+        a++;
+        b++;
+    }
+
+    if (*a == '\0' && *b == '\0') {
+        return 1;
+    }
+
+    return 0;
+}
