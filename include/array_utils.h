@@ -45,7 +45,7 @@ void compress_duplicates(int a[], int *n);
 void stats(const int a[], int n, int *min, int *max, double *avg);
 
 /*
- * Determines whether an array is sorted in non-decreasing order.
+ * Determines whether an array is sorted in increasing order.
  *
  * @param a  input array
  * @param n  number of elements
